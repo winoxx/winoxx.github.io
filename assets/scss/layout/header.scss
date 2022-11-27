@@ -1,0 +1,17 @@
+@use "../utiles/box-shadow.scss";
+
+
+header{
+    font-family: "shrikhand", cursive;
+    text-align: center;
+    margin: 0;
+    padding: 25px;
+    
+}
+// position relative pour que le trait prononce se voit//
+.titre{
+    
+    @include box-shadow.base-shadow;
+    position: relative;
+    z-index: 1000;
+}

@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu&family=Roboto:wght@300&family=Shrikhand&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "roboto", sans-serif;
+}
+main{
+    padding: 0;
+}
+.wrapper{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+}
+h2{
+  padding: 2rem 1rem;
+  margin: 0;
+  
+}
+h3,p{
+  margin: 8px;
+}
+a{
+  text-decoration: none;
+  color:inherit;
+}

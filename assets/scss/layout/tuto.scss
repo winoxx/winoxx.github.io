@@ -1,0 +1,47 @@
+@use "../utiles/zoom.scss";
+@use "../utiles/box-shadow.scss";
+//* parent donc flex*//
+.tuto{
+  counter-reset: steps;
+  & ol{
+    // bien centre sur le bloc//
+    padding: 0 15px;
+    display: flex;
+    gap: 2rem;
+    @media (max-width:1000px){
+      flex-direction: column;
+    } 
+  }
+  & li{
+    position:relative;
+    
+    &::before{
+      content: counter(steps);
+      counter-increment: steps;
+      //* forme des chiffres 1 2 3*//
+      color: white;
+      background-color: #9356dc;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      bottom: 0.5rem;
+      left: -0.5rem;
+      position: absolute
+    }
+    list-style-type: none;
+    background-color: #f6f6f6;
+    padding: 1rem 3rem;
+    flex-grow: 1;
+    border-radius: 1rem;
+    cursor: pointer;
+    @include box-shadow.base-shadow;
+    &:hover{
+      @include zoom.zoom;
+    }
+    & i {
+      margin-right: 1rem;
+    }
+  }  
+}

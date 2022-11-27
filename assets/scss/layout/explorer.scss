@@ -1,0 +1,29 @@
+@use "../utiles/box-shadow.scss";
+@use "../utiles/linear.scss";
+.explorer{
+    text-align: center;
+    & h2{
+        font-size:2rem;
+        font-weight: bold;
+    }
+    & p{
+        font-size: 1rem;
+    }
+    & button{
+        color:white;
+        font-weight: 300;
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        border: none;
+        @include box-shadow.base-shadow;
+        @include linear.gradient(0.9);
+        margin-top: 1.5rem;
+        cursor: pointer;
+        transition: all 200ms;  
+    }
+    & button:hover{
+        transform: scale(1.02);
+        opacity: 0.9;  
+    }
+}

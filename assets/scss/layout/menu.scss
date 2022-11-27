@@ -1,0 +1,91 @@
+@use "../utiles/couleurs.scss";
+@use "../utiles/linear.scss";
+@use "../utiles/mixins.scss";
+
+.wrapper{
+    //contenu du site//
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1350px;
+}
+.menus{
+    background-color: #f6f6f6f6;
+    padding-bottom: 2rem;
+}
+.menus_cards{
+    display: grid;
+    // espace entre deux bloques//
+    gap: 2rem;
+    // nombre de colonne 2 //
+    grid-template-columns: 1fr 1fr;
+    @media (max-width:767px){
+        // 1 colonne 1 fois//
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .new{
+        position: relative;
+    }
+    .new::before{
+        content:"new";
+        position: absolute;
+        background-color: couleurs.$couleur-ter;
+        width: 5rem;
+        height: 2rem;
+        // centre verticlament et horizoontalement avec le grid et place items car texalign est uniquement vertical//
+        display: grid;
+        place-items: center;
+        right:1rem;
+        top: 1rem;
+    }
+}
+.card{
+    position: relative;
+    & .card_image{
+        height:15rem;
+        background-size: cover;
+        border-radius: 1rem 1rem 0 0;
+    }
+    &_image1{
+        background-image:  url(../image/assiette.jpg);
+    }
+    &_image2{
+        background-image: url(../image/assiettemain.jpg);
+    }
+    &_image3{
+        background-image: url(../image/assiettevuehauteur.jpg);
+    }
+    &_image4{
+        background-image: url(../image/assiettelarge.jpg);
+    }  
+    &_description{
+        position: relative;
+        top: 0.9rem;
+        background-color: white;
+        border-radius: 0 0 1rem 1rem;
+        &::before{
+            @include mixins.heart; 
+        }
+        &::after{
+            @include mixins.heart;
+            opacity: 0;
+            font-weight: 900;
+            color: transparent;
+            @include linear.gradient(1);
+            
+        }
+        &:hover::after{
+            opacity: 1;
+            transform: scale(1.2); 
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+@use "../utiles/couleurs.scss";
+@use "../utiles/mixins.scss";
+@use "../utiles/linear.scss";
+
+.footer{
+    background-color: #353535;
+}
+
+.footer_container{
+    width: 100%;
+    /* si pas max width le bloc ecriture reste tout a gauche*/
+    max-width: 1350px;
+    margin: 0 auto;
+    color: white;
+    font-family: "shrikhand", cursive;
+    font-weight: 500px;
+    padding: 1rem 0;  
+    i{
+        margin: 0 1rem;
+    }  
+        
+}
+
